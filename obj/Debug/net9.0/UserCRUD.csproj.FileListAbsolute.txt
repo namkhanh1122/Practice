@@ -154,3 +154,4 @@
 /Users/nguyennamkhanh/Documents/Dotnet Trainning /PracticeDotnetWebapi/UserCRUD/obj/Debug/net9.0/UserCRUD.pdb
 /Users/nguyennamkhanh/Documents/Dotnet Trainning /PracticeDotnetWebapi/UserCRUD/obj/Debug/net9.0/UserCRUD.genruntimeconfig.cache
 /Users/nguyennamkhanh/Documents/Dotnet Trainning /PracticeDotnetWebapi/UserCRUD/obj/Debug/net9.0/ref/UserCRUD.dll
+/Users/nguyennamkhanh/Documents/Dotnet Trainning /PracticeDotnetWebapi/UserCRUD/obj/Debug/net9.0/UserCRUD.sourcelink.json

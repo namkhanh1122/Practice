@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Data.DTOs
 {
-    public class UserReq
+    public class CreateUserReq
     {
         [Required]
         public string userName { get; set; }

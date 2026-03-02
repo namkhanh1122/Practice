@@ -23,7 +23,7 @@ namespace Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateUser(UserReq userReq)
+        public IActionResult CreateUser(CreateUserReq createUserReq)
         {
             if (!ModelState.IsValid)
             {
@@ -32,9 +32,9 @@ namespace Controllers
             var user = new User
             {
                 userId = Guid.NewGuid(),
-                userName = userReq.userName,
-                email = userReq.email,
-                password = userReq.password
+                userName = createUserReq.userName,
+                email = createUserReq.email,
+                password = createUserReq.password
             };
             _context.Users.Add(user);
             _context.SaveChanges();
@@ -49,6 +49,19 @@ namespace Controllers
                 return NotFound();
             }
             _context.Users.Remove(user);
+            _context.SaveChanges();
+            return NoContent();
+        }
+        [HttpPatch("{id}")]
+        public IActionResult UpdateUser (Guid id, UpdateUserReq updateUserReq)
+        {
+            var user = _context.Users.Find(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            user.userName = updateUserReq.userName;
+            user.email = updateUserReq.email;
             _context.SaveChanges();
             return NoContent();
         }
